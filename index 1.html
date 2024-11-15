@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style 1.css">
+   
+</head>
+<body>
+	<div class="container">
+		<!-- Zakładki -->
+		<div class="tabs">
+			<div class="tab active" onclick="showTab('history')">Historia</div>
+			<div class="tab" onclick="showTab('attractions')">Atrakcje</div>
+			<div class="tab" onclick="showTab('contact')">Kontakt</div>
+		</div>
+	
+		<!-- Zawartość zakładek -->
+		<div id="history" class="content active">
+			<h2>Historia Krakowa</h2>
+			<p>Kraków to jedno z najstarszych miast w Polsce, znane ze swojej bogatej historii i pięknych zabytków.</p>
+			<h1>Kraków moje miasto!</h1>	
+<h5>W Krakowie umarł pewien gość,<br>
+ 
+			w mojej opinii człowiek święty,<br>
+ 
+			bo nie klął jak szewc, lecz "psia kość"<br>
+ 
+			krzyczał, gdy płacił alimenty.<br>
+ 
+ 
+			Cichutko na mej klatce spał,<br>
+ 
+			i o porządnych śnił kobietach,<br>
+ 
+			gdy mały łyk brzozówki brał<br>
+ 
+			i chleba krztynę, jak asceta.<br><hr></h5>
+<h3>Kraków moje miasto!</h3>
+<h4>Kraków moje miasto!</h4>
+<h5>Kraków moje miasto!</h5>
+<h6>Kraków moje miasto!</h6>
+ 
+		
+</div>
+		
+		<div id="attractions" class="content">
+			<h2>Atrakcje Krakowa</h2>
+			<p>Kraków, Stołeczne Królewskie Miasto Kraków - miasto na prawach powiatu położone w południowej Polsce nad Wisłą,<br>
+				drugie co do liczby mieszkańców. Formalna stolica Polski do 1795 roku i miasto koronacyjne oraz nekropolia królów Polski.<br>
+				Od 1000 roku nieprzerwanie stolica diecezji krakowskiej (jednej z pięciu w ówczesnej Polsce), a od 1925 archidiecezji i metropolii.</p>
+	   <img src="https://th.bing.com/th/id/R.c7556e9221c70b02346543dd7ccffb26?rik=SCmHKAzzdjladw&riu=http%3a%2f%2fwww.luxnomade.com%2fwp-content%2fuploads%2f2019%2f03%2fKrakow-Poland-iStock-580115446-2.jpg&ehk=xefTczvkzgJEr4z3UvFG879DvboLP4YWg4c9h8rNK54%3d&risl=&pid=ImgRaw&r=0" alt"obrazek" width="300px">
+	   
+	   
+		</div>
+		
+		<div id="contact" class="content">
+			<h2>Kontakt</h2>
+			<p>Jeśli masz pytania, wypełnij poniższy formularz kontaktowy.</p>
+			<!-- Formularz HTML -->
+			<form action="#" method="post">
+				<label for="name">Imię i nazwisko:</label>
+				<input type="text" id="name" name="name" required>
+				
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required>
+				
+				<label for="message">Wiadomość:</label>
+				<textarea id="message" name="message" rows="4" required></textarea>
+				
+				<button type="submit">Wyślij</button>
+			</form>
+		</div>
+	</div>
+	
+    
+
+
+<script> 
+	alert("Hello World!")
+</script>
+	<script>
+		// Funkcja do przełączania zakładek
+		function showTab(tabId) {
+			// Ukryj wszystkie treści
+			const contents = document.querySelectorAll('.content');
+			contents.forEach(content => content.classList.remove('active'));
+	
+			// Dezaktywuj wszystkie zakładki
+			const tabs = document.querySelectorAll('.tab');
+			tabs.forEach(tab => tab.classList.remove('active'));
+	
+			// Pokaż wybraną zawartość i aktywuj zakładkę
+			document.getElementById(tabId).classList.add('active');
+			document.querySelector(`.tab[onclick="showTab('${tabId}')"]`).classList.add('active');
+		}
+	</script>
+	
+</body>
+
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+a{background-color:aqua}
+p {color:rgb(204, 47, 196)}
+
+p.kolorek {color:deepskyblue}/*Klasa tylko dla p*/
+.innykolorek {color:deeppink}/*klasa do wszystkiego*/
+.innykolorekxd {color:rgb(202, 111, 26)}/*klasa do wszystkiego*/
+.kolorek {color:gold}/*klasa do wszystkiego*/
+.akapit1{
+    font-size: 31px;
+    font-family: cursive, serif;
+    padding: 50px;
+    padding-right:10px;
+    margin: 0;
+    border: 1px;
+    border-style: solid;
+
+}
+
+#main {
+    color:hotpink;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1,6;
+    background-color: antiquewhite;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: blue;
+    color: aliceblue;
+    padding: 20px 0;
+    text-align: center;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+
+}
+
+nav ul li {
+display: inline;
+
+
+
+}
+main {
+padding: 20px;
+max-width: 1200px;
+margin: 0 auto;
+
+}
+input[type=text], select {
+    width: 100%;
+    padding : 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f8f8f8;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+}
+
+.tabs {
+    display: flex;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.tab {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    background-color: #cfcfcf;
+    transition: background-color 0.3s ease;
+}
+
+.tab.active {
+    background-color: #4a90e2;
+    color: white;
+}
+
+.content {
+    display: none;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.content.active {
+    display: block;
+}
+
+/* Styl formularza */
+form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
