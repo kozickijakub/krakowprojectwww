@@ -1,32 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Historia Krakowa i Kalkulator</title>
+    <title>Historia Krakowa</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
-        <h1>Witamy na naszej stronie!</h1>
+        <h1>Witamy na stronie o Krakowie</h1>
     </header>
 
     <nav>
-        <a href="#" onclick="showSection('history')">Historia Krakowa</a>
-        <a href="#" onclick="showSection('calculator')">Kalkulator</a>
+        <a href="index.html" class="active">Historia Krakowa</a>
+        <a href="kalkulator.html">Kalkulator</a>
     </nav>
 
-    <section id="history" class="active">
-        <h2>Historia Krakowa</h2>
-        <p>Kraków to jedno z najstarszych miast w Polsce, znane ze swojej bogatej historii i pięknych zabytków.</p>
-        <h3>Wierszyk o Krakowie:</h3>
-        <p>
-            W Krakowie smoka już dawno nie ma, <br>
-            Lecz echo legend wciąż w powietrzu drzemie. <br>
-            Rynek się mieni blaskiem historii, <br>
-            A hejnał wieży w sercach się tworzy.
-        </p>
-    </section>
+    <div class="container">
+        <div class="tabs">
+            <div class="tab active" onclick="showTab('history')">Historia Krakowa</div>
+            <div class="tab" onclick="showTab('calculator')">Kalkulator</div>
+        </div>
 
+        <!-- Historia Krakowa -->
+        <div id="history" class="content active">
+            <h2>Wierszyk o Krakowie</h2>
+            <p>
+                W Krakowie smoka już dawno nie ma,<br>
+                Lecz echo legend wciąż w powietrzu drzemie.<br>
+                Rynek się mieni blaskiem historii,<br>
+                A hejnał wieży w sercach się tworzy.
+            </p>
+
+            <img src="https://www.krakow.pl/gfx/krakow/pl/defaultsite/fotki/01/krakow-widok-01.jpg" alt="Kraków" class="krakow-image">
+
+            <p>Kraków to miasto pełne historii i kultury. Jednym z jego najbardziej charakterystycznych elementów jest Wawel, który jest nie tylko pięknym zamkiem, ale również symbolem polskiej państwowości.</p>
+        </div>
+
+        <!-- Kalkulator -->
+        <div id="calculator" class="content">
+            <h2>Kalkulator</h2>
+            <form id="calculator-form">
+                <label for="number1">Liczba 1:</label>
+                <input type="number" id="number1" required>
+
+                <label for="number2">Liczba 2:</label>
+                <input type="number" id="number2" required>
+
+                <label for="operation">Operacja:</label>
+                <select id="operation">
+                    <option value="add">Dodawanie</option>
+                    <option value="subtract">Odejmowanie</option>
+                    <option value="multiply">Mnożenie</option>
+                    <option value="divide">Dzielenie</option>
+                </select>
+
+                <button type="button" onclick="calculate()">Oblicz</button>
+            </form>
+
+            <p class="result">Wynik: <span id="result">---</span></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Kraków</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
