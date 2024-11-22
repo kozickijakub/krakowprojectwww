@@ -1,8 +1,13 @@
-  // Funkcja przełączania sekcji
-  function showSection(sectionId) {
-    const sections = document.querySelectorAll('section');
-    sections.forEach(section => section.classList.remove('active'));
-    document.getElementById(sectionId).classList.add('active');
+// Funkcja do przełączania zakładek
+function showTab(tabId) {
+    const contents = document.querySelectorAll('.content');
+    contents.forEach(content => content.classList.remove('active'));
+    
+    const tabs = document.querySelectorAll('.tab');
+    tabs.forEach(tab => tab.classList.remove('active'));
+
+    document.getElementById(tabId).classList.add('active');
+    document.querySelector(`.tab[onclick="showTab('${tabId}')"]`).classList.add('active');
 }
 
 // Funkcja kalkulatora
