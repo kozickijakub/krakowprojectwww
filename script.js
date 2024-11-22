@@ -1,11 +1,8 @@
-// Funkcja przełączania zakładek
-function showTab(tabId) {
-    const contents = document.querySelectorAll('.content');
-    contents.forEach(content => content.classList.remove('active'));
-    const tabs = document.querySelectorAll('.tab');
-    tabs.forEach(tab => tab.classList.remove('active'));
-    document.getElementById(tabId).classList.add('active');
-    document.querySelector(`.tab[onclick="showTab('${tabId}')"]`).classList.add('active');
+  // Funkcja przełączania sekcji
+  function showSection(sectionId) {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => section.classList.remove('active'));
+    document.getElementById(sectionId).classList.add('active');
 }
 
 // Funkcja kalkulatora
@@ -29,16 +26,12 @@ function calculate() {
                 result = number1 * number2;
                 break;
             case 'divide':
-                if (number2 === 0) {
-                    result = 'Nie można dzielić przez zero!';
-                } else {
-                    result = number1 / number2;
-                }
+                result = number2 !== 0 ? number1 / number2 : 'Nie można dzielić przez zero!';
                 break;
             default:
                 result = 'Nieznana operacja.';
         }
     }
 
-    document.getElementById('result').querySelector('span').textContent = result;
+    document.getElementById('result').textContent = result;
 }
